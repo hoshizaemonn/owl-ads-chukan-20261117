@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>OWL福祉 短縮版とキーワード 中間報告</title>
+<style>
+:root{
+  --bg:#f6f8fb; --card:#ffffff; --ink:#1c2733; --sub:#5b6b7c; --line:#dfe6ee;
+  --blue:#1f6feb; --blue-bg:#e8f0fe; --orange:#d9730d; --orange-bg:#fff1e0;
+  --green:#1a7f4b; --green-bg:#e3f5ea; --red:#c0392b; --red-bg:#fdeceb; --gray-bar:#b8c4d1;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1620; --card:#17212d; --ink:#e8eef5; --sub:#9bacbd; --line:#2a3745;
+    --blue:#6aa6ff; --blue-bg:#16263f; --orange:#ffa94d; --orange-bg:#3a2a14; --green:#5fd39a; --green-bg:#12301f; --red:#ff8a7a; --red-bg:#3a1a17; --gray-bar:#4a5a6b;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1620; --card:#17212d; --ink:#e8eef5; --sub:#9bacbd; --line:#2a3745;
+  --blue:#6aa6ff; --blue-bg:#16263f; --orange:#ffa94d; --orange-bg:#3a2a14; --green:#5fd39a; --green-bg:#12301f; --red:#ff8a7a; --red-bg:#3a1a17; --gray-bar:#4a5a6b;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.7;font-size:16px;word-break:auto-phrase;line-break:strict}
+h1,h2,h3,.lead{text-wrap:balance}
+.wrap{max-width:980px;margin:0 auto;padding:20px 16px 56px}
+h1{font-size:clamp(22px,4.6vw,30px);line-height:1.4;margin:6px 0 6px}
+h2{font-size:clamp(18px,3.8vw,22px);margin:0 0 6px;line-height:1.45}
+h3{font-size:15px;margin:14px 0 6px}
+.lead{color:var(--sub);margin:0 0 18px;font-size:15px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:99px;background:var(--blue-bg);color:var(--blue);margin-bottom:6px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 16px;margin:0 0 16px}
+.concl,.card{min-width:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media (max-width:820px){.grid4{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.grid2,.grid4{grid-template-columns:1fr}}
+.concl{border-radius:12px;padding:12px 14px;border:1px solid var(--line);background:var(--bg)}
+.concl .no{display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;border-radius:99px;background:var(--blue);color:#fff;font-weight:700;font-size:13px;margin-right:6px}
+.concl b{display:block;margin-bottom:4px}
+.concl small{color:var(--sub);display:block;font-size:13px;line-height:1.6}
+.concl.good{background:var(--green-bg);border-color:var(--green)}
+.concl.mid{background:var(--orange-bg);border-color:var(--orange)}
+.bar-row{display:grid;grid-template-columns:110px minmax(0,1fr);align-items:start;gap:8px;margin:10px 0;font-size:14px}
+@media (max-width:620px){.bar-row{grid-template-columns:minmax(0,1fr);gap:2px}}
+.bars{display:grid;gap:6px;min-width:0}
+.b{display:block;min-width:0}
+.b i{display:block;height:18px;border-radius:5px;min-width:3px}
+.lab{display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px;margin-top:2px}
+.b i.old{background:var(--gray-bar)} .b i.new{background:var(--blue)} .b i.a{background:var(--orange)} .b i.bb{background:var(--blue)} .b i.bud{background:var(--line)} .b i.use{background:var(--orange)}
+.b span{font-weight:700;font-variant-numeric:tabular-nums;font-size:13px}
+.b em{font-style:normal;color:var(--sub);font-size:12px;font-variant-numeric:tabular-nums}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--sub);margin:4px 0 8px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.note{color:var(--sub);font-size:13px;margin:8px 0 0}
+.verdict{display:inline-block;font-size:12px;font-weight:700;padding:1px 9px;border-radius:99px;margin-left:6px}
+.v-ok{background:var(--green-bg);color:var(--green)} .v-no{background:var(--orange-bg);color:var(--orange)} .v-same{background:var(--blue-bg);color:var(--blue)}
+.flow{display:grid;grid-template-columns:1fr 40px 1fr 40px 1fr;gap:6px;align-items:stretch}
+.flow>*{min-width:0}
+.flow .step{border-radius:12px;padding:12px;border:1px solid var(--line);background:var(--bg);font-size:14px}
+.flow .step b{display:block;font-size:15px;margin-bottom:4px}
+.flow .arrow{display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--sub)}
+.flow .step.a{background:var(--orange-bg);border-color:var(--orange)}
+.flow .step.b2{background:var(--blue-bg);border-color:var(--blue)}
+.flow .step.res{background:var(--green-bg);border-color:var(--green)}
+@media (max-width:720px){.flow{grid-template-columns:1fr}.flow .arrow{transform:rotate(90deg);height:26px}}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{border-bottom:1px solid var(--line);padding:9px 8px;text-align:left;vertical-align:top}
+th{font-size:13px;color:var(--sub)}
+td.n{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+.unk li{margin:5px 0}
+ul{margin:6px 0;padding-left:20px}
+.foot{color:var(--sub);font-size:12px;margin-top:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<span class="tag">鈴木さん向け・中間報告</span>
+<h1>OWL福祉 Google広告：短縮版とキーワードの中間結果</h1>
+<p class="lead">2026-11-17 時点。Google＝スマホ。数字は、人数（分母）つきの割合で書いています。問い合わせの件数はまだ少なく、判定は12/11（中間確認は11/27ごろ）です。</p>
+
+<!-- 結論 -->
+<div class="card">
+  <h2>結論（先に）</h2>
+  <div class="grid2" style="margin-top:10px">
+    <div class="concl good"><b><span class="no">1</span>短縮版で、序盤の離脱は減った傾向</b><small>ページの25%まで届いた人：48% → 74%。ただしフォーム付近までは差が偶然の範囲（11% → 18%）</small></div>
+    <div class="concl mid"><b><span class="no">2</span>キーワードを増やしても、クリック率は同じ</b><small>14%前後で差なし。ただしクリックは約2.5倍、1クリックの費用は約半分</small></div>
+    <div class="concl mid"><b><span class="no">3</span>Yahooは予算の約6割しか使えていない</b><small>12,000円に対し7,400〜7,700円/日。11/22に同じなら10,000円へ下げ、Googleへ回す</small></div>
+    <div class="concl"><b><span class="no">4</span>提案：短縮版 vs 新LP を同条件で比べる</b><small>同じキーワード・同じ予算。7語の枠で2〜3週間。新LPはGA4タグを最初から入れる</small></div>
+  </div>
+</div>
+
+<!-- 1 短縮版 -->
+<div class="card">
+  <h2>1. 短縮版で離脱は減ったか（Clarity・Google・スマホ）</h2>
+  <p class="lead" style="margin-bottom:8px">入れ替え版＝11/7〜11/12（PV27）／短縮版＝11/13〜11/17<span style="white-space:nowrap">（-eと-fの合算 PV73）</span>。「ページのどこまで届いたか」の割合です。</p>
+  <div class="legend"><span><i style="background:var(--gray-bar)"></i>入れ替え版（-b）</span><span><i style="background:var(--blue)"></i>短縮版（-e・-f）</span></div>
+
+  <div class="bar-row"><div>25%まで届いた</div><div class="bars">
+    <div class="b"><i class="old" style="width:48%"></i><div class="lab"><span>48%</span><em>13/27</em></div></div>
+    <div class="b"><i class="new" style="width:74%"></i><div class="lab"><span>74%</span><em>54/73</em><span class="verdict v-ok">差あり（p=0.018）※</span></div></div></div></div>
+  <div class="bar-row"><div>50%まで</div><div class="bars">
+    <div class="b"><i class="old" style="width:44%"></i><div class="lab"><span>44%</span><em>12/27</em></div></div>
+    <div class="b"><i class="new" style="width:67%"></i><div class="lab"><span>67%</span><em>49/73</em><span class="verdict v-no">境界（p=0.063）※</span></div></div></div></div>
+  <div class="bar-row"><div>75%まで</div><div class="bars">
+    <div class="b"><i class="old" style="width:33%"></i><div class="lab"><span>33%</span><em>9/27</em></div></div>
+    <div class="b"><i class="new" style="width:37%"></i><div class="lab"><span>37%</span><em>27/73</em><span class="verdict v-same">差なし（p=0.82）</span></div></div></div></div>
+  <div class="bar-row"><div>90%＝フォーム付近</div><div class="bars">
+    <div class="b"><i class="old" style="width:11%"></i><div class="lab"><span>11%</span><em>3/27</em></div></div>
+    <div class="b"><i class="new" style="width:18%"></i><div class="lab"><span>18%</span><em>13/73</em><span class="verdict v-same">偶然の範囲（p=0.55）</span></div></div></div></div>
+  <p class="note">※短いページは、同じ％でも少ないスクロールで届きます。25%・50%の差には「短くなった分」が含まれます。公平に比べられるのは、フォーム付近（90%）です。そこは今は差と言えません（見分けるには各群 約400PV 必要）。</p>
+
+  <h3>押されている場所（1PVあたりのタップ数）</h3>
+  <div class="legend"><span><i style="background:var(--gray-bar)"></i>入れ替え版</span><span><i style="background:var(--blue)"></i>短縮版</span></div>
+  <div class="bar-row"><div>FAQ</div><div class="bars">
+    <div class="b"><i class="old" style="width:48%"></i><div class="lab"><span>1.44</span><em>39/27</em></div></div>
+    <div class="b"><i class="new" style="width:56%"></i><div class="lab"><span>1.68</span><em>124/74</em><span class="verdict v-same">ほぼ同じ</span></div></div></div></div>
+  <div class="bar-row"><div>FAQ以外</div><div class="bars">
+    <div class="b"><i class="old" style="width:9%"></i><div class="lab"><span>0.26</span><em>7/27</em></div></div>
+    <div class="b"><i class="new" style="width:24%"></i><div class="lab"><span>0.73</span><em>54/74</em><span class="verdict v-ok">約2.8倍（p≈0.01）</span></div></div></div></div>
+  <p class="note">FAQ以外の中身（ボタン・フォーム・事例リンクなど）は、まだ分けられていません。短縮版には動画が1本入っています（入れ替え版にはなし）が、動画のタップはデータに出ておらず、効果は不明です。事例の「くわしい経緯を見る」は短縮版で4件押されています。</p>
+</div>
+
+<!-- 2 キーワード -->
+<div class="card">
+  <h2>2. キーワードを増やすと（Google 11/14〜16）</h2>
+  <p class="lead" style="margin-bottom:8px">A＝2語（-e）／B＝7語（-f）。広告文・予算（7,050円/日）は同じ。</p>
+  <div class="legend"><span><i style="background:var(--orange)"></i>A（2語）</span><span><i style="background:var(--blue)"></i>B（7語）</span></div>
+  <div class="bar-row"><div>クリック率</div><div class="bars">
+    <div class="b"><i class="a" style="width:44%"></i><div class="lab"><span>14.8%</span><em>19/128</em></div></div>
+    <div class="b"><i class="bb" style="width:42%"></i><div class="lab"><span>14.1%</span><em>47/334</em><span class="verdict v-same">差なし（p=0.88）</span></div></div></div></div>
+  <div class="bar-row"><div>表示回数</div><div class="bars">
+    <div class="b"><i class="a" style="width:38%"></i><div class="lab"><span>128</span></div></div>
+    <div class="b"><i class="bb" style="width:100%"></i><div class="lab"><span>334</span><span class="verdict v-ok">約2.6倍</span></div></div></div></div>
+  <div class="bar-row"><div>クリック数</div><div class="bars">
+    <div class="b"><i class="a" style="width:40%"></i><div class="lab"><span>19</span></div></div>
+    <div class="b"><i class="bb" style="width:100%"></i><div class="lab"><span>47</span><span class="verdict v-ok">約2.5倍</span></div></div></div></div>
+  <div class="bar-row"><div>1クリックの費用</div><div class="bars">
+    <div class="b"><i class="a" style="width:100%"></i><div class="lab"><span>約990円</span><em>18,830円/19</em></div></div>
+    <div class="b"><i class="bb" style="width:42%"></i><div class="lab"><span>約415円</span><em>19,488円/47</em><span class="verdict v-ok">約半分</span></div></div></div></div>
+  <div class="bar-row"><div>問い合わせ</div><div class="bars">
+    <div class="b"><span>A 0/22クリック</span></div>
+    <div class="b"><span>B 1/54クリック</span><span class="verdict v-same">まだ比べられない（p=1.00）</span></div></div></div>
+  <p class="note">増やして変わったのは「入ってくる量と費用」で、「押されやすさ」ではありません。質の違う人が来るか・問い合わせが増えるかは、12/11の件数で見ます。</p>
+</div>
+
+<!-- 3 Yahoo -->
+<div class="card">
+  <h2>3. Yahooの予算（1日あたり）</h2>
+  <div class="legend"><span><i style="background:var(--line)"></i>予算 12,000円</span><span><i style="background:var(--orange)"></i>実際の費用（TO-CP05）</span></div>
+  <div class="bar-row"><div>11/15</div><div class="bars">
+    <div class="b"><i class="use" style="width:62%"></i><div class="lab"><span>7,426円</span><em>約62%</em></div></div></div></div>
+  <div class="bar-row"><div>11/16</div><div class="bars">
+    <div class="b"><i class="use" style="width:64%"></i><div class="lab"><span>7,652円</span><em>約64%</em></div></div></div></div>
+  <div class="bar-row"><div>予算の線</div><div class="bars"><div class="b"><i class="bud" style="width:100%"></i><div class="lab"><span>12,000円</span></div></div></div></div>
+  <ul>
+    <li><b>予算の上限に当たっていません。</b>使えていないのは、検索の量（表示は1日約150〜170回）が足りないからです。</li>
+    <li><b>11/22に同じ傾向なら、10,000円に下げて差額をGoogleへ。</b>Googleは11/14に、予算超過で「取りこぼし」が<span style="white-space:nowrap">約5〜6割</span>ありました。回した分は使い切れる見込みです。</li>
+    <li><b>キーワードの精査は必要。</b>「障害者支援 事業 開業」の表示が662回（Yahoo全体の約半分）と突出。クリックが0件の語も8語あります。検索語句レポートで、対象外が混ざっていないかを見ます。</li>
+  </ul>
+</div>
+
+<!-- 4 提案 -->
+<div class="card">
+  <h2>4. 提案：短縮版 vs 新LP</h2>
+  <p class="lead" style="margin-bottom:10px">「キーワードで差が出ない」は、クリック率（広告の話）です。LPとの相性は、クリックのあと（離脱・フォーム・問い合わせ）に出ます。LPだけの差を見るために、条件をそろえます。</p>
+  <div class="flow">
+    <div class="step a"><b>枠① 短縮版（-e／-f）</b>同じキーワード（7語）<br>同じ予算・同じ広告文</div>
+    <div class="arrow">⇄</div>
+    <div class="step b2"><b>枠② 新LP</b>同じキーワード（7語）<br>同じ予算・同じ広告文<br><small>GA4タグを最初から入れる</small></div>
+    <div class="arrow">→</div>
+    <div class="step res"><b>見るもの</b>フォーム付近への到達（各<span style="white-space:nowrap">250〜400PV</span>）<br>問い合わせ数<br>2〜3週間</div>
+  </div>
+  <p class="note">2語のままだと、1日約6クリックで4週間でも約170。必要な250〜400に届きません。7語（1日約16クリック）なら2〜3週間で届きます。</p>
+</div>
+
+<!-- 未確定 -->
+<div class="card">
+  <h2>未確定の点（先に知っておいてほしいこと）</h2>
+  <ul class="unk">
+    <li><b>GA4にライト版（短縮版を含む）が入っていません。</b>LP用のGA4タグ（<span style="white-space:nowrap">G-KPKERL0R4F</span>）が漏れています。10/25に直す指示書は作成済みで、未実施です。いまはClarityで代用しています。</li>
+    <li><b>問い合わせの件数が少なく、LPやキーワードの優劣は決められません。</b>Googleが数件、Yahooが3件です。</li>
+    <li><b>YahooとGoogleは、媒体の違いも混ざります。</b>Yahoo＝長いライト版、Google＝短縮版（入れ替え版は11/12まで）。</li>
+    <li><b>入れ替え版の母数が小さい（PV27）。</b>11/12で終わっているため、これ以上は増えません。</li>
+  </ul>
+  <p class="foot">出典：Clarity（ヒートマップ・11/7〜11/17・モバイル・Google）／広告日次スプレッドシート（11/13〜11/16）／問い合わせログ。「偶然の確率」は、同じ差が偶然だけで出る確率（0.05より小さければ偶然とは考えにくい）。鈴木さんの了承のうえで公開（検索には載せない設定）。</p>
+</div>
+
+</div>
+</body>
+</html>
