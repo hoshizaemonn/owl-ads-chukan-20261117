@@ -73,6 +73,13 @@ td.n{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
 .unk li{margin:5px 0}
 ul{margin:6px 0;padding-left:20px}
 .foot{color:var(--sub);font-size:12px;margin-top:18px}
+.lk{display:grid;gap:8px;margin-top:10px}
+.lk .it{display:grid;grid-template-columns:150px minmax(0,1fr);gap:4px 12px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);font-size:14px}
+.lk .it b{display:block}
+.lk .it small{color:var(--sub);display:block;font-size:12px;line-height:1.5;margin-top:2px}
+.lk a{color:var(--blue);word-break:break-all}
+@media (max-width:620px){.lk .it{grid-template-columns:minmax(0,1fr)}}
+.lk .it.wip{border-style:dashed}
 </style>
 </head>
 <body>
@@ -90,6 +97,19 @@ ul{margin:6px 0;padding-left:20px}
     <div class="concl mid"><b><span class="no">2</span>キーワードを増やしても、クリック率は同じ</b><small>14%前後で差なし。ただしクリックは約2.5倍、1クリックの費用は約半分</small></div>
     <div class="concl mid"><b><span class="no">3</span>Yahooは予算の約6割しか使えていない</b><small>12,000円に対し7,400〜7,700円/日。11/22に同じなら10,000円へ下げ、Googleへ回す</small></div>
     <div class="concl"><b><span class="no">4</span>提案：短縮版 vs 新LP を同条件で比べる</b><small>同じキーワード・同じ予算。7語の枠で2〜3週間。新LPはGA4タグを最初から入れる</small></div>
+  </div>
+</div>
+
+<!-- 見ているLP -->
+<div class="card">
+  <h2>比べているLPのリンク</h2>
+  <p class="lead" style="margin-bottom:6px">この図解に出てくるLPです。リンクを押すと本番ページが開きます。</p>
+  <div class="lk">
+    <div class="it"><div><b>入れ替え版（-b）</b><small>Google・11/7〜11/12</small></div><div>ライト版のQ&amp;Aを上に上げただけの版<br><a href="https://owl-fukushi.net/lp_zero_lite_20260918-b/" target="_blank" rel="noopener">owl-fukushi.net/lp_zero_lite_20260918-b/</a></div></div>
+    <div class="it"><div><b>短縮A（-e）</b><small>Google A（2語）・11/13〜</small></div><div>10スクロール版（短縮版）<br><a href="https://owl-fukushi.net/lp_zero_lite_20260918-e/" target="_blank" rel="noopener">owl-fukushi.net/lp_zero_lite_20260918-e/</a></div></div>
+    <div class="it"><div><b>短縮B（-f）</b><small>Google B（7語）・11/13〜</small></div><div>-eのコピー（中身は同じ）<br><a href="https://owl-fukushi.net/lp_zero_lite_20260918-f/" target="_blank" rel="noopener">owl-fukushi.net/lp_zero_lite_20260918-f/</a></div></div>
+    <div class="it"><div><b>Yahoo現行（長い版）</b><small>Yahoo CP05</small></div><div>入れ替え版と同じ構成のライト版<br><a href="https://owl-fukushi.net/lp_zero_lite_20260918/" target="_blank" rel="noopener">owl-fukushi.net/lp_zero_lite_20260918/</a><small>広告のリンク先は、問い合わせの着地ページから推定（広告管理画面では未確認）</small></div></div>
+    <div class="it wip"><div><b>新LP（資料請求型）</b><small>作成中</small></div><div>モック（デザイン確認用）の段階です。公開URLはまだありません。</div></div>
   </div>
 </div>
 
